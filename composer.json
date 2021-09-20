@@ -1,0 +1,25 @@
+{
+    "name": "marcosorozco/prevalence-search-data",
+    "description": "Paquete para facilitar pasar datos a través de rutas",
+    "type": "package",
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/container" : "5.8.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Marcosorozco\\PrevalenceSearchData\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marcos Orozco",
+            "email": "marcosorozco.14@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
