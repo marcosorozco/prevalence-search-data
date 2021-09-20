@@ -1,5 +1,7 @@
 <?php
 
+namespace MarcosOrozco\App;
+
 use Illuminate\Container\Container;
 
 class Url
