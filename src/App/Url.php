@@ -1,6 +1,6 @@
 <?php
 
-namespace MarcosOrozco\App;
+namespace MarcosOrozco\PrevalenceSearchData\App;
 
 use Illuminate\Container\Container;
 
