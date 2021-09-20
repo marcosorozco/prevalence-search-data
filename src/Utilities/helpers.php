@@ -19,6 +19,10 @@ if (! function_exists('route')) {
             ->make('url')
             ->route($name, $parameters, $absolute);
     }
+}
+
+
+if (! function_exists('route_prevalence')) {
 
     /**
      * Generate the URL to a named route.
