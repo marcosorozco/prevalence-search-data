@@ -2,8 +2,6 @@
 
 namespace MarcosOrozco\PrevalenceSearchData\App;
 
-use Illuminate\Container\Container;
-
 class Url
 {
     /**
