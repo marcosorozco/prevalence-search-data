@@ -27,14 +27,16 @@ class Url
         self::$data = $arrayData;
     }
 
-    public static function getPrevalecenceData()
+    public static function getPrevalecenceData($key = '')
     {
+        if ($key)
+            return self::$data[$key] ?? null;
         return self::$data;
     }
 
     public static function generateArray(array $array = [], array $except = [], $removeString = '')
     {
-        $values = Container::getInstance()->make('request')->only(self::$data);
+        $values = self::$data;
         $arrayValues = array_merge($array, $values);
         $result = [];
         foreach ($arrayValues as $key=>$value) {
@@ -70,7 +72,7 @@ class Url
      */
     public static function generateInput(array $except = [], $removeString = '')
     {
-        $arrayValues = Container::getInstance()->make('request')->only(self::$data);
+        $arrayValues = self::$data;
         $result = '';
         foreach ($arrayValues as $key=>$value) {
             if (!in_array($key, $except)) {
