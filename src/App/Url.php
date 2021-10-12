@@ -32,8 +32,10 @@ class Url
         return self::$data;
     }
 
-    public static function generateArray(array $array = [], array $except = [], $removeString = '')
+    public static function generateArray($array = [], array $except = [], $removeString = '')
     {
+        if (!is_array($array))
+            $array = [$array];
         $values = self::$data;
         $arrayValues = array_merge($array, $values);
         $result = [];
@@ -51,8 +53,10 @@ class Url
      * @param string $removeString
      * @return array
      */
-    public function toArray(array $array = [], array $except = [], $removeString = '')
+    public function toArray($array = [], array $except = [], $removeString = '')
     {
+        if (!is_array($array))
+            $array = [$array];
         $arrayValues = array_merge($array, $this->arrayValues);
         $result = [];
         foreach ($arrayValues as $key=>$value) {
